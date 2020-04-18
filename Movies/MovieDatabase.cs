@@ -21,7 +21,7 @@ namespace Movies
             
             using (StreamReader file = System.IO.File.OpenText("movies.json"))
             {
-                string json = file.ReadToEnd();
+                string json = file.ReadToEnd(); // Puts file into one long string
                 movies = JsonConvert.DeserializeObject<List<Movie>>(json);
             }
         }
@@ -29,6 +29,6 @@ namespace Movies
         /// <summary>
         /// Gets all the movies in the database
         /// </summary>
-        public static IEnumerable<Movie> All { get { return movies; } }
+        public static IEnumerable<Movie> All { get { return movies; } } // The list of movies as Ienumerable so you can iterate through them
     }
 }

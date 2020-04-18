@@ -14,6 +14,11 @@ namespace Movies
         /// Gets or sets the title of the movie
         /// </summary>
         public string Title { get; set; }
+
+        /// <summary>
+        /// Gets or sets the director of the movie
+        /// </summary>
+        public string Director { get; set; }
                 
         /// <summary>
         /// Gets or sets the MPAA rating of the movie
@@ -23,16 +28,16 @@ namespace Movies
         /// <summary>
         /// Gets or sets the genre of the movie
         /// </summary>
-        public string MajorGenre { get; set; }
+        public string MajorGenre { get; set; } // Strings can be null already
 
         /// <summary>
         /// Gets or sets the IMDB rating of the movie
         /// </summary>
-        public float? IMDBRating { get; set; }
+        public float? IMDBRating { get; set; } // Can convert to a nullable type
 
         /// <summary>
         /// Gets or sets the rotten tomatoes rating of the movie
         /// </summary>
-        public float? RottenTomatoesRating { get; set; }
+        public float? RottenTomatoesRating { get; set; } // Not every movie has one, so should be null
     }
 }
